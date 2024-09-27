@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f0ff; /* Fondo claro */
+}
+
+header {
+  background-color: #003366; /* Azul oscuro */
+  color: white;
+  padding: 20px;
+  display: flex; /* Usar flexbox */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrar verticalmente */
+  position: relative; /* Para usar z-index */
+  z-index: 2; /* Asegura que el header esté encima */
+}
+
+h1 {
+  margin: 0; /* Eliminar margen por defecto */
+}
+
+nav {
+  margin-top: 0; /* Eliminar margen superior */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Alinear enlaces en línea */
+  margin: 0; /* Eliminar margen */
+}
+
+nav ul > li {
+  margin-right: 55px; /* Espacio entre elementos */
+  position: relative; /* Para el submenú */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #00509e; /* Azul medio */
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #003366; /* Azul oscuro */
+  padding: 10px;
+  margin-top: 5px;
+  width: 150px; /* Ajusta el ancho aquí */
+}
+
+nav ul li:hover ul {
+  display: block; /* Muestra el submenú al pasar el mouse */
+}
+
+nav ul li ul li {
+  display: block;
+  margin: 5px 0;
+  margin-right: 15px;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+  color: #333; /* Texto oscuro para contraste */
+}
+
+.portada {
+  position: relative; /* Permite el posicionamiento absoluto de elementos internos */
+  z-index: 1; /* Asegúrate de que esté detrás del menú */
+}
+
+.portada img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.bienvenida {
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta el centro del texto */
+  color: rgb(3, 17, 218); /* Color del texto */
+  font-size: 50px; /* Tamaño de fuente */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+  background-color: rgba(119, 172, 233, 0.5); /* Fondo semitransparente */
+}
+section {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+section:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: blue;
+}
+#trabajos-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
